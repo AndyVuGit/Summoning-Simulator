@@ -17,15 +17,15 @@ Released under the MIT license: http://jsbin.mit-license.org
   <script>
     var pity = 0;
     var counter = 0;
+    var fiveStar = ["Bridal Cordelia", "Faye", "Summer Gaius", "Hinoka", "Innes", "Jakob",
+                   "Horse Lyn", "Valentine Roy", "TacoMeat", "Summer Frederick", "Jaffar",
+                   "Spring Kagero", "Olivia", "Sakura", "Sothe", "Soup TacoMeat", "Elise",
+                   "Genny", "Bridal Lyn", "Mist", "Nanna", "Robin"]; //22
+    var shitStar = ["Gordin", "Jeorge", "Klein", "Leon", "Niles", "Rebecca", "Setsuna",
+                   "Virion", "Felicia", "Shitty Gaius", "Jakob", "Kagero", "Matthew", "Saizo",
+                   "Azama", "Clarine", "Lachesis", "Lissa", "Lucius", "Maria", "Priscilla",
+                   "Sakura", "Serra", "Wrys"]; //24
     function chance(){
-      var fiveStar = ["Bridal Cordelia", "Faye", "Summer Gaius", "Hinoka", "Innes", "Jakob",
-                     "Horse Lyn", "Valentine Roy", "TacoMeat", "Summer Frederick", "Jaffar",
-                     "Spring Kagero", "Olivia", "Sakura", "Sothe", "Soup TacoMeat", "Elise",
-                     "Genny", "Bridal Lyn", "Mist", "Nanna", "Robin"]; //22
-      var shitStar = ["Gordin", "Jeorge", "Klein", "Leon", "Niles", "Rebecca", "Setsuna",
-                     "Virion", "Felicia", "Shitty Gaius", "Jakob", "Kagero", "Matthew", "Saizo",
-                     "Azama", "Clarine", "Lachesis", "Lissa", "Lucius", "Maria", "Priscilla",
-                     "Sakura", "Serra", "Wrys"]; //24
       var num = Math.floor(Math.random() * 100);
       var ele = document.createElement("p");
       if (num < (6+pity)){
@@ -45,20 +45,20 @@ Released under the MIT license: http://jsbin.mit-license.org
         }
         ele.appendChild(words);
       }
-      
+
       document.body.appendChild(ele);
-      
+
       counter++;
       if (counter == 5){
         counter = 0;
         pity += .5;
       }
-      
+
     }
   </script>
 <body>
   <p >Welcome to Colorless Hell</p>
   <input type="button" value="Summon" onClick="chance()"/>
-  
+
 </body>
 </html>
