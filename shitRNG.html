@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by anonymous (http://jsbin.com/doxarujiqo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+  <script>
+    var pity = 0;
+    var counter = 0;
+    function chance(){
+      var fiveStar = ["Bridal Cordelia", "Faye", "Summer Gaius", "Hinoka", "Innes", "Jakob",
+                     "Horse Lyn", "Valentine Roy", "TacoMeat", "Summer Frederick", "Jaffar",
+                     "Spring Kagero", "Olivia", "Sakura", "Sothe", "Soup TacoMeat", "Elise",
+                     "Genny", "Bridal Lyn", "Mist", "Nanna", "Robin"]; //22
+      var shitStar = ["Gordin", "Jeorge", "Klein", "Leon", "Niles", "Rebecca", "Setsuna",
+                     "Virion", "Felicia", "Shitty Gaius", "Jakob", "Kagero", "Matthew", "Saizo",
+                     "Azama", "Clarine", "Lachesis", "Lissa", "Lucius", "Maria", "Priscilla",
+                     "Sakura", "Serra", "Wrys"]; //24
+      var num = Math.floor(Math.random() * 100);
+      var ele = document.createElement("p");
+      if (num < (6+pity)){
+        var whichHero = Math.floor(Math.random() * 22);
+        var words = document.createTextNode("You pulled 5 star " + fiveStar[whichHero]);
+        ele.appendChild(words);
+        pity = 0;
+      }
+      else{
+        var shitHero = Math.floor(Math.random() * 24);
+        var threeOrFour = Math.floor(Math.random() * 100);
+        if (threeOrFour < 49){
+          var words = document.createTextNode("You pulled 3 star " + shitStar[shitHero]);
+        }
+        else{
+          var words = document.createTextNode("You pulled 4 star " + shitStar[shitHero]);
+        }
+        ele.appendChild(words);
+      }
+      
+      document.body.appendChild(ele);
+      
+      counter++;
+      if (counter == 5){
+        counter = 0;
+        pity += .5;
+      }
+      
+    }
+  </script>
+<body>
+  <p >Welcome to Colorless Hell</p>
+  <input type="button" value="Summon" onClick="chance()"/>
+  
+</body>
+</html>
