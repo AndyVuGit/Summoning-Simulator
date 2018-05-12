@@ -3,6 +3,24 @@
 Created using JS Bin
 http://jsbin.com
 
+Copyright (c) 2018 by anonymous (http://jsbin.com/covesikimo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by anonymous (http://jsbin.com/putujokibe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
 Copyright (c) 2018 by anonymous (http://jsbin.com/doxarujiqo/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
@@ -17,25 +35,80 @@ Released under the MIT license: http://jsbin.mit-license.org
   <script>
     var pity = 0;
     var counter = 0;
-    var fiveStar = ["Bridal Cordelia", "Faye", "Summer Gaius", "Hinoka", "Innes", "Jakob",
-                   "Horse Lyn", "Valentine Roy", "TacoMeat", "Summer Frederick", "Jaffar",
-                   "Spring Kagero", "Olivia", "Sakura", "Sothe", "Soup TacoMeat", "Elise",
-                   "Genny", "Bridal Lyn", "Mist", "Nanna", "Robin"]; //22
-    var shitStar = ["Gordin", "Jeorge", "Klein", "Leon", "Niles", "Rebecca", "Setsuna",
-                   "Virion", "Felicia", "Shitty Gaius", "Jakob", "Kagero", "Matthew", "Saizo",
-                   "Azama", "Clarine", "Lachesis", "Lissa", "Lucius", "Maria", "Priscilla",
-                   "Sakura", "Serra", "Wrys"]; //24
-    function chance(){
+    var fiveStar = [];
+    var shitStar = [];
+
+    function Chance(num){
+      var fiveStarNum = 0;
+      var shitStarNum = 0;
+      if (num == 1){
+        fiveStar = ["Bridal Cordelia", "Faye", "Summer Gaius", "Hinoka", "Innes", "Jakob",
+                    "Horse Lyn", "Valentine Roy", "TacoMeat", "Summer Frederick", "Jaffar",
+                    "Spring Kagero", "Olivia", "Sakura", "Sothe", "Soup TacoMeat", "Elise",
+                    "Genny", "Bridal Lyn", "Mist", "Nanna", "Robin"]; //22
+        fiveStarNum = fiveStar.length;
+        shitStar = ["Gordin", "Jeorge", "Klein", "Leon", "Niles", "Rebecca", "Setsuna",
+                    "Virion", "Felicia", "Shitty Gaius", "Jakob", "Kagero", "Matthew", "Saizo",
+                    "Azama", "Clarine", "Lachesis", "Lissa", "Lucius", "Maria", "Priscilla",
+                    "Sakura", "Serra", "Wrys"]; //24
+        shitStarNum = shitStar.length;
+      }
+      else if(num == 2){
+        fiveStar = ["Alm", "Ares", "Arya", "New Year Camilla", "Horse Chrom", "Eldigan",
+                   "Elincia", "Gray", "Legendary Ike", "Ike", "Karel", "Leif", "Lene",
+                   "Lucina", "Luke", "Lyn", "Mia", "SwordArt", "Brave Roy", "Ryoma",
+                   "Saber", "Siegbert", "Sigurd", "Soleil", "Zelgius", "Young Tiki",
+                   "Celica", "Horse Eirika", "Katarina", "Leo", "Summer Leo", "Morgan(M)",
+                   "Halloween Nowi", "Sanaki(Thot)", "Christmas Tharja"]; //35
+        fiveStarNum = fiveStar.length;
+        shitStar = ["Athena", "Caeda", "Cain", "Chrom", "Corrin(M)", "Draug", "Eirika",
+                    "Eliwood", "Fir", "Hana", "Hinata", "Laslow", "Lon'qu", "Marth",
+                   "Ogma", "Olivia", "Palla", "Roy", "Selena", "Seliph", "Seth", "Stahl",
+                   "Tiki", "Henry", "Lilina", "Raigh", "Sophia", "Tharja"]; //28
+        shitStarNum = shitStar.length;
+      }
+      else if(num == 3){
+        fiveStar = ["Azura", "Charlotte", "Horse Ephraim", "Ephraim", "Fjorm", "Hardin",
+                   "Hinoka", "Lucina", "Nephenee", "Christmas Robin(M)", "Summer Robin(F)",
+                   "Shigure", "Shiro", "Tana", "Spring Xander", "Ninian", "Bridal Caeda",
+                   "Spring Catria", "Summer Corrin(Fuck You Danny)", "Delthea", "Ishtar",
+                   "L'Arachel", "Linde", "Bunny Lucina", "Lute", "Valentine Lyn", "Micaiah",
+                   "Morgan(F)", "Olwen", "Dancer Shigure"]; //
+        fiveStarNum = fiveStar.length;
+        shitStar = ["Abel", "Catria", "Clair", "Cordelia", "Donnel", "Effie", "Est",
+                   "Florina", "Wendy", "Jagen", "Lukas", "Mathilda", "Oboro", "Oscar",
+                   "Peri", "Roderick", "Shanna", "Subaki", "Sully", "Corrin(F)", "Nowi",
+                   "Mae", "Odin", "Reinhardt", "Robin(M)", "Tailtiu"]; //
+        shitStarNum = shitStar.length;
+      }
+      else{
+        fiveStar = ["Amelia", "Flying Azura", "Dark Azura", "Christmas Chrom", "Spring Chrom",
+                   "Dorcas", "Hector", "Valentine Hector", "Axe Ike", "Christmas Lissa",
+                   "Minerva", "Summer Tiki", "Summer Xander", "Kana", "Myrrh", "Dragon Robin(M)",
+                   "Spring Camilla", "Deirdre", "Summer Elise", "Gunnthra", "Halloween Henry", 
+                    "Dancer Inigo", "Julia", "Valentine Lilina", "Green Olwen", "Rhajat",
+                   "Spring Sharena", "Sonya", "Legendary Lyn"];
+        fiveStarNum = fiveStar.length;
+        shitStar = ["Arthur", "Barst", "Bartre", "Beruka", "Camilla", "Cherche", "Federick",
+                   "Gunter", "Hawkeye", "Raven", "Sheena", "Titania", "Fae", "Boey",
+                   "Cecilia", "Merric", "Nino Nino Ni", "Soren"];
+        shitStarNum = shitStar.length;
+      }
+      
+      
+      
+      
+      
       var num = Math.floor(Math.random() * 100);
       var ele = document.createElement("p");
       if (num < (6+pity)){
-        var whichHero = Math.floor(Math.random() * 22);
+        var whichHero = Math.floor(Math.random() * fiveStarNum);
         var words = document.createTextNode("You pulled 5 star " + fiveStar[whichHero]);
         ele.appendChild(words);
         pity = 0;
       }
       else{
-        var shitHero = Math.floor(Math.random() * 24);
+        var shitHero = Math.floor(Math.random() * shitStarNum);
         var threeOrFour = Math.floor(Math.random() * 100);
         if (threeOrFour < 49){
           var words = document.createTextNode("You pulled 3 star " + shitStar[shitHero]);
@@ -57,8 +130,11 @@ Released under the MIT license: http://jsbin.mit-license.org
     }
   </script>
 <body>
-  <p >Welcome to Colorless Hell</p>
-  <input type="button" value="Summon" onClick="chance()"/>
-
+  <p >Welcome to Hell</p>
+  <input type="button" value="Summon Colorless" onClick="Chance(1)"/>
+  <input type="button" value="Summon Red" onClick="Chance(2)"/>
+  <p></p>
+  <input type="button" value="Summon Blue" onClick="Chance(3)"/>
+  <input type="button" value="Summon Green" onClick="Chance(4)"/>
 </body>
 </html>
