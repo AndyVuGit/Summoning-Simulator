@@ -3,6 +3,15 @@
 Created using JS Bin
 http://jsbin.com
 
+Copyright (c) 2018 by anonymous (http://jsbin.com/tobeqabuki/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
 Copyright (c) 2018 by anonymous (http://jsbin.com/xurukecala/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
@@ -115,30 +124,33 @@ Released under the MIT license: http://jsbin.mit-license.org
       
       
       
-      
+      //document.getElementById("myText").value = "Johnny Bravo";
       
       var num = Math.floor(Math.random() * 100);
-      var ele = document.createElement("p");
+      //var ele = document.createElement("p");
       if (num < (6+pity)){
         var whichHero = Math.floor(Math.random() * fiveStarNum);
-        var words = document.createTextNode("You pulled 5 star " + fiveStar[whichHero]);
-        ele.appendChild(words);
+        //var words = document.createTextNode("You pulled 5 star " + fiveStar[whichHero]);
+        var words = "You pulled 5 star " + fiveStar[whichHero];
+        //ele.appendChild(words);
         pity = 0;
       }
       else{
         var shitHero = Math.floor(Math.random() * shitStarNum);
         var threeOrFour = Math.floor(Math.random() * 100);
         if (threeOrFour < 49){
-          var words = document.createTextNode("You pulled 3 star " + shitStar[shitHero]);
+          //var words = document.createTextNode("You pulled 3 star " + shitStar[shitHero]);
+          var words = "You pulled 3 star " + shitStar[shitHero];
         }
         else{
-          var words = document.createTextNode("You pulled 4 star " + shitStar[shitHero]);
+          //var words = document.createTextNode("You pulled 4 star " + shitStar[shitHero]);
+          var words = "You pulled 3 star " + shitStar[shitHero];
         }
-        ele.appendChild(words);
+        //ele.appendChild(words);
       }
 
-      document.body.appendChild(ele);
-
+      //document.body.appendChild(ele);
+      document.getElementById("myText").value = words;
       counter++;
       if (counter == 5){
         counter = 0;
@@ -219,6 +231,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 </style>
 <body>
+  <input type="text" id="myText" style="width: 345px; text-align: center;" value="">
   <div class="container">
     <img src="https://d1u5p3l4wpay3k.cloudfront.net/feheroes_gamepedia_en/thumb/d/df/Summon_Heroes_Stones.png/281px-Summon_Heroes_Stones.png?version=455ee4f7641133729aafe5d8b3c05112"
          style="width:100%">
