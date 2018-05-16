@@ -3,6 +3,15 @@
 Created using JS Bin
 http://jsbin.com
 
+Copyright (c) 2018 by anonymous (http://jsbin.com/xurukecala/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
 Copyright (c) 2018 by anonymous (http://jsbin.com/kehodimaxe/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
@@ -166,23 +175,58 @@ Released under the MIT license: http://jsbin.mit-license.org
     text-align: center;
 }
 
-  .container .colorless{
+  .container .blue{
     width: 90px;
     height: 90px;
     background-color: transparent;
   }
+  
+  .container .green{
+    top: 37%;
+    left: 21%;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+  }
+  
+  .container .grey1{
+    top: 37%;
+    left: 79%;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+  }
+  
+  .container .grey2{
+    top: 57%;
+    left: 68%;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+  }
+  
+  .container .red{
+    top: 57%;
+    left: 32%;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+  }
+  
+  button:focus{
+    outline:0;
+  }
 
 </style>
 <body>
-  <p >Welcome to Hell</p>
-  <input type="button" value="Summon Colorless" onClick="Chance(1)"/>
-  <input type="button" value="Summon Red" onClick="Chance(2)"/>
-  <p></p>
-  <input type="button" value="Summon Blue" onClick="Chance(3)"/>
-  <input type="button" value="Summon Green" onClick="Chance(4)"/>
   <div class="container">
     <img src="https://d1u5p3l4wpay3k.cloudfront.net/feheroes_gamepedia_en/thumb/d/df/Summon_Heroes_Stones.png/281px-Summon_Heroes_Stones.png?version=455ee4f7641133729aafe5d8b3c05112"
          style="width:100%">
-    <button class="btn colorless" onClick="Chance(3)"></button>
+    <button class="btn blue" onClick="Chance(3)"></button>
+    <button class="btn green" onClick="Chance(4)"></button>
+    <button class="btn grey1" onClick="Chance(1)"></button>
+    <button class="btn grey2" onClick="Chance(1)"></button>
+    <button class="btn red" onClick="Chance(2)"></button>
+  </div>
 </body>
 </html>
