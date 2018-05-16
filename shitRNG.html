@@ -3,6 +3,15 @@
 Created using JS Bin
 http://jsbin.com
 
+Copyright (c) 2018 by anonymous (http://jsbin.com/kehodimaxe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
 Copyright (c) 2018 by anonymous (http://jsbin.com/covesikimo/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
@@ -129,6 +138,41 @@ Released under the MIT license: http://jsbin.mit-license.org
 
     }
   </script>
+<style>
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+}
+
+  .container .colorless{
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+  }
+
+</style>
 <body>
   <p >Welcome to Hell</p>
   <input type="button" value="Summon Colorless" onClick="Chance(1)"/>
@@ -136,5 +180,9 @@ Released under the MIT license: http://jsbin.mit-license.org
   <p></p>
   <input type="button" value="Summon Blue" onClick="Chance(3)"/>
   <input type="button" value="Summon Green" onClick="Chance(4)"/>
+  <div class="container">
+    <img src="https://d1u5p3l4wpay3k.cloudfront.net/feheroes_gamepedia_en/thumb/d/df/Summon_Heroes_Stones.png/281px-Summon_Heroes_Stones.png?version=455ee4f7641133729aafe5d8b3c05112"
+         style="width:100%">
+    <button class="btn colorless" onClick="Chance(3)"></button>
 </body>
 </html>
