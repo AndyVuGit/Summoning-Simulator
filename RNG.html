@@ -3,7 +3,7 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2018 by anonymous (http://jsbin.com/nuwebepile/1/edit)
+Copyright (c) 2018 by anonymous (http://jsbin.com/lopowocugu/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -20,7 +20,8 @@ Released under the MIT license: http://jsbin.mit-license.org
     var counter = 0;
     var fiveStar = [];
     var shitStar = [];
-
+    
+    //Pulling Function
     function Chance(num){
       var fiveStarNum = 0;
       var shitStarNum = 0;
@@ -87,7 +88,8 @@ Released under the MIT license: http://jsbin.mit-license.org
       if (num < (6+pity)){
         var whichHero = Math.floor(Math.random() * fiveStarNum);
         //var words = document.createTextNode("You pulled 5 star " + fiveStar[whichHero]);
-        var words = "You pulled 5 star " + fiveStar[whichHero];
+        var words = "You pulled 5 star " + fiveStar[whichHero] + " (" +
+            fiveStarStat(fiveStar.length) + "%)";
         //ele.appendChild(words);
         pity = 0;
       }
@@ -96,11 +98,13 @@ Released under the MIT license: http://jsbin.mit-license.org
         var threeOrFour = Math.floor(Math.random() * 100);
         if (threeOrFour < 49){
           //var words = document.createTextNode("You pulled 3 star " + shitStar[shitHero]);
-          var words = "You pulled 3 star " + shitStar[shitHero];
+          var words = "You pulled 3 star " + shitStar[shitHero] + " (" + 
+              shitStarStat(shitStar.length) + "%)";
         }
         else{
           //var words = document.createTextNode("You pulled 4 star " + shitStar[shitHero]);
-          var words = "You pulled 4 star " + shitStar[shitHero];
+          var words = "You pulled 4 star " + shitStar[shitHero] + " (" +
+              shitStarStat(shitStar.length) + "%)";
         }
         //ele.appendChild(words);
       }
@@ -113,6 +117,17 @@ Released under the MIT license: http://jsbin.mit-license.org
         pity += .5;
       }
 
+    }
+    
+    //Statistic Function
+    function fiveStarStat(total){
+      var stat = (.06 + (pity/100)) * (1/total);
+      return stat.toPrecision(2);
+    }
+
+    function shitStarStat(total){
+      var stat = (.94 - (pity/100)) * (1/total);
+      return stat.toPrecision(2);
     }
   </script>
 <style>
